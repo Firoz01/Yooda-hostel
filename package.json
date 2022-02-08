@@ -1,0 +1,22 @@
+{
+  "name": "yooda-hostal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-dev": "nodemon server.js",
+    "debug": "ndb server.js"
+  },
+  "keywords": [],
+  "author": "Md Firoz Mia",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.1",
+    "nodemon": "^2.0.15"
+  }
+}
