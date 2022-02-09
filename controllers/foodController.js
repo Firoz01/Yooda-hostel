@@ -28,7 +28,10 @@ exports.getList = catchAsync(async (req, res, next) => {
   res.header("Access-Control-Expose-Headers", "X-Total-Count");
   res.json(foods);
 });
-
+exports.getAFood = catchAsync(async (req, res, next) => {
+  const food = await Food.findById(req.params.id);
+  res.status(200).json(food);
+});
 exports.deleteFood = catchAsync(async (req, res, next) => {
   console.log(req.params);
   const doc = await Food.findByIdAndDelete(req.params.id);

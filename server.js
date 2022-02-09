@@ -11,7 +11,7 @@ app.use(cors());
 
 // const DB = process.env.DB_LOCAL;
 const DB = process.env.DB_ATLAS;
-console.log(DB);
+
 mongoose.connect(DB).then(() => {
   console.log("Database connection successful!");
 });

@@ -9,6 +9,7 @@ router.get("/", foodController.getList, function (req, res, next) {
 });
 router
   .route("/:id")
+  .get(foodController.getAFood)
   .put(foodController.updateFood)
   .delete(foodController.deleteFood);
 module.exports = router;
