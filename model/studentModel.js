@@ -22,8 +22,9 @@ const studentSchema = new mongoose.Schema(
       type: String,
       required: [true, "Student must have hall"],
     },
-    status: {
-      type: String,
+    isStatus: {
+      type: Boolean,
+      default: false,
       required: [true, "Student must have status"],
     },
   },
