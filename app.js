@@ -7,6 +7,7 @@ const app = express();
 app.use(cors());
 
 const foodRouter = require('./routes/foodRoute');
+const studentRouter = require('./routes/studentRoute');
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -18,5 +19,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/foods', foodRouter);
+app.use('/students', studentRouter)
 
 module.exports = app;

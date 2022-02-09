@@ -33,10 +33,9 @@ exports.getAFood = catchAsync(async (req, res, next) => {
   res.status(200).json(food);
 });
 exports.deleteFood = catchAsync(async (req, res, next) => {
-  console.log(req.params);
   const doc = await Food.findByIdAndDelete(req.params.id);
   if (!doc) {
-    return next(new AppError("No food document with that Id", 404));
+    return next(new AppError("No food document found with that Id", 404));
   }
   res.status(200).json(doc);
 });
